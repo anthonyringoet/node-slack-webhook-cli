@@ -7,25 +7,21 @@ var assign = require('lodash.assign')
 var pick = require('lodash.pick')
 var slack = require('slack-notify')
 var defaults = require('./defaults')
+
 yargs
   .usage('Usage: $0 <command> [options]')
   .command('', null, function () {
     yargs.showHelp()
   })
-  .command('setup', 'Verify your default settings', setup)
+  .command('setup', 'Verify your active settings', setup)
   .example('$0 setup')
   .command('send', 'Send a message to Slack', send)
-  .example('$0 send -m "Hello slack"')
+  .example('$0 send -m "Hello Slack"')
   .describe('m', 'Message')
-  .alias('m', 'message')
   .describe('c', 'Channel')
-  .alias('c', 'channel')
   .describe('u', 'Username to use')
-  .alias('u', 'username')
   .describe('w', 'Webhook URL')
-  .alias('w', 'webhook')
   .describe('e', 'Emoji icon')
-  .alias('e', 'emoji')
   .help('h')
   .alias('h', 'help')
   .version(function () {
@@ -40,20 +36,30 @@ function send (yargs) {
   var send = slack(options.url).extend(options)
   var message = yargs.argv.m
 
-  console.log(yargs.argv)
-
   if (!message) {
     return console.log('Message is required')
   }
 
-  console.log('Sending: "%s" to %s', message, options.channel)
-  return send(message)
+  return send(message, function (err) {
+    if (err) return console.log('Slack API refused to place message or no internet connection.')
+
+    return console.log('Sent: "%s" to %s', message, options.channel)
+  })
 }
 
 function setup (yargs) {
   var options = getDefaults(yargs.argv)
-  console.log('\nWith the current input your resulting options are:')
-  console.log(options)
+  var output = '\n'
+
+  for (var item in options) {
+
+    if (options.hasOwnProperty(item)) {
+      var line = item + ': ' + options[item] + '\n'
+      output += line
+    }
+  }
+
+  return console.log(output)
 }
 
 function getDefaults (options) {
@@ -64,10 +70,10 @@ function getDefaults (options) {
     username: process.env.SLACK_WEBHOOK_CLI_USERNAME
   }
   var cliOptions = {
-    url: options.url,
-    channel: options.channel,
-    icon_emoji: options.emoji,
-    username: options.username
+    url: options.w,
+    channel: options.c,
+    icon_emoji: options.e,
+    username: options.u
   }
   env = pick(env, function (n) {
     if (n) return true
