@@ -1,0 +1,50 @@
+{
+  "name": "slack-webhook-cli",
+  "description": "Command line interface to send messages to Slack by using the lightweight webhook API.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Anthony Ringoet",
+    "email": "anthonyringoet@gmail.com"
+  },
+  "bin": {
+    "slack-hook": "bin/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/anthonyringoet/node-slack-webhook-cli/issues"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "dependencies": {
+    "ghooks": "^0.3.2",
+    "lodash.assign": "^3.2.0",
+    "lodash.pick": "^3.1.0",
+    "slack-notify": "^0.1.4",
+    "yargs": "^3.15.0"
+  },
+  "devDependencies": {
+    "ghooks": "^0.3.2",
+    "standard": "^4.5.4"
+  },
+  "homepage": "https://github.com/anthonyringoet/node-slack-webhook-cli",
+  "keywords": [
+    "alerts",
+    "api",
+    "cli",
+    "notifications",
+    "slack",
+    "webhook"
+  ],
+  "license": "MIT",
+  "main": "bin/cli.js",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anthonyringoet/node-slack-webhook-cli"
+  },
+  "scripts": {
+    "test": "standard **/*.js --format"
+  }
+}
