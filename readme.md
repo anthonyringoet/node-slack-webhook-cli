@@ -8,7 +8,18 @@ Configuration can be handled using environment variables or command line options
 From least to most heavy for overruling eachother:
 - Internal defaults
 - Environment variables
+  - `SLACK_WEBHOOK_CLI_URL`
+  - `SLACK_WEBHOOK_CLI_CHANNEL`
+  - `SLACK_WEBHOOK_CLI_EMOJI`
+  - `SLACK_WEBHOOK_CLI_USERNAME`
 - Command line options
+  - `-m` or `--message` __required__
+  - `-w` or `--webhook`
+  - `-c` or `--channel`
+  - `-e` or `--emoji`
+  - `-u` or `--username`
+
+#### Setting environment variables
 
 ## Commands
 

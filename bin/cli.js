@@ -22,6 +22,8 @@ yargs
   .alias('c', 'channel')
   .describe('u', 'Username to use')
   .alias('u', 'username')
+  .describe('w', 'Webhook URL')
+  .alias('w', 'webhook')
   .describe('e', 'Emoji icon')
   .alias('e', 'emoji')
   .help('h')
@@ -37,6 +39,8 @@ function send (yargs) {
   var options = getDefaults(yargs.argv)
   var send = slack(options.url).extend(options)
   var message = yargs.argv.m
+
+  console.log(yargs.argv)
 
   if (!message) {
     return console.log('Message is required')
