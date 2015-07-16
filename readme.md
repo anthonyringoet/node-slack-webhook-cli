@@ -58,5 +58,5 @@ $ slack-hook setup -c "#foobar" -e ":panda_face:"
 
 ```bash
 $ slack-hook send -m "Something happened" -c "#beep"
-# Sending: "Something happened" to #beep
+# Sent: "Something happened" to #beep
 ```
