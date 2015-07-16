@@ -13,14 +13,24 @@ From least to most heavy for overruling eachother:
 ## Commands
 
 ### setup
-Verifies your setup and shows your current options.
+Verifies your setup and shows your resulting options given your input.
 
 ```bash
 $ slack-hook setup
+
+# actual example
+$ slack-hoop setup --channel "#foobar" --emoji ":panda_face:"
+
+# With the current input your resulting options are:
+# url: 'https://hooks.slack.com/services/sdfq51dsf1s251/561sdfq/sdf51q51sdf20sdf1ds1f5'
+# channel: '#foobar'
+# icon_emoji: ':panda_face:'
+# username: 'slack-webhook-bot'
 ```
 
 ### send
 
 ```bash
-$ slack-hook send -m "Something happened."
+$ slack-hook send --message "Something happened" --channel "#beep"
+# Sending: "Something happened" to #beep
 ```
