@@ -4,6 +4,13 @@
 
 > A command line interface to send messages to Slack by using their lightweight incoming webhooks API. You never need to authenticate as an actual Slack user to use this interface.
 
+## Installation
+
+```bash
+$ npm i slack-webhook-cli -g
+# this should make the `slack-hook` command globally available
+```
+
 ## Configuration
 Configuration can be handled using environment variables or command line options.
 
@@ -15,13 +22,19 @@ From least to most heavy for overruling eachother:
   - `SLACK_WEBHOOK_CLI_EMOJI`
   - `SLACK_WEBHOOK_CLI_USERNAME`
 - Command line options
-  - `-m`: message __required__
+  - `-m`: message __required__ when sending
   - `-w`: webhook url
   - `-c`: channel
   - `-e`: emoji
   - `-u`: username
 
 #### Setting environment variables
+
+You can use environment variables for your default options.
+
+```bash
+$ export SLACK_WEBHOOK_CLI_USERNAME=sl4ckb0t
+```
 
 ## Commands
 

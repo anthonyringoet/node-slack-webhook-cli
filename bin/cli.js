@@ -52,7 +52,6 @@ function setup (yargs) {
   var output = '\n'
 
   for (var item in options) {
-
     if (options.hasOwnProperty(item)) {
       var line = item + ': ' + options[item] + '\n'
       output += line
