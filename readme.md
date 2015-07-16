@@ -19,7 +19,7 @@ Verifies your setup and shows your resulting options given your input.
 $ slack-hook setup
 
 # actual example
-$ slack-hoop setup --channel "#foobar" --emoji ":panda_face:"
+$ slack-hook setup --channel "#foobar" --emoji ":panda_face:"
 
 # With the current input your resulting options are:
 # url: 'https://hooks.slack.com/services/sdfq51dsf1s251/561sdfq/sdf51q51sdf20sdf1ds1f5'
