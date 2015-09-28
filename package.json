@@ -18,14 +18,14 @@
     }
   },
   "dependencies": {
-    "lodash.assign": "^3.2.0",
-    "lodash.pick": "^3.1.0",
-    "slack-notify": "^0.1.4",
-    "yargs": "^3.15.0"
+    "lodash.assign": "3.2.0",
+    "lodash.pick": "3.1.0",
+    "slack-notify": "0.1.4",
+    "yargs": "3.26.0"
   },
   "devDependencies": {
-    "ghooks": "^0.3.2",
-    "standard": "^4.5.4"
+    "ghooks": "0.3.2",
+    "standard": "4.5.4"
   },
   "homepage": "https://github.com/anthonyringoet/node-slack-webhook-cli",
   "keywords": [
