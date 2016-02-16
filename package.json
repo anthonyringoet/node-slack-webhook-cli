@@ -18,7 +18,7 @@
     }
   },
   "dependencies": {
-    "lodash.assign": "3.2.0",
+    "lodash.assign": "4.0.3",
     "lodash.pick": "3.1.0",
     "slack-notify": "0.1.5",
     "yargs": "3.32.0"
