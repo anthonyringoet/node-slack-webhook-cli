@@ -24,7 +24,7 @@
     "yargs": "4.4.0"
   },
   "devDependencies": {
-    "ghooks": "1.0.3",
+    "ghooks": "1.2.0",
     "standard": "6.0.8"
   },
   "homepage": "https://github.com/anthonyringoet/node-slack-webhook-cli",
