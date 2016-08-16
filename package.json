@@ -21,7 +21,7 @@
     "lodash.assign": "^4.0.6",
     "lodash.pick": "^4.2.1",
     "slack-notify": "^0.1.6",
-    "yargs": "^4.8.1"
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "ghooks": "^1.2.1",
