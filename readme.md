@@ -1,5 +1,7 @@
 # slack-webhook-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/anthonyringoet/node-slack-webhook-cli.svg)](https://greenkeeper.io/)
+
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 > A command line interface to send messages to Slack by using their lightweight incoming webhooks API. You never need to authenticate as an actual Slack user to use this interface.
